@@ -1,3 +1,8 @@
+<?php
+$url_base="http://localhost/practicos/app/";
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -31,13 +36,13 @@
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="secciones/empleados/">Empleados</a>
+                    <a class="nav-link" href="<?php echo $url_base; ?>secciones/empleados/">Empleados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Puestos</a>
+                    <a class="nav-link" href="<?php echo $url_base; ?>secciones/puestos/">Puestos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Usuarios</a>
+                    <a class="nav-link" href="<?php echo $url_base; ?>secciones/usuarios/">Usuarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Cerrar Sesion</a>
