@@ -3,7 +3,18 @@
 </br>
 
 <div class="card">
-    <div class="card-header">Empleados</div>
+    <div class="card-header">
+        Empleados
+        <a
+        name=""
+        id=""
+        class="btn btn-primary"
+        href="crear.php"
+        role="button">
+        Agregar registro
+        </a>
+        
+    </div>
     <div class="card-body">
         
 
@@ -30,7 +41,33 @@
                     <td>CV.pdf</td>
                     <td>Programador Jr.</td>
                     <td>18/03/2024</td>
-                    <td>Carta|Editar|Eliminar</td>
+                    <td>
+                        <a
+                            name=""
+                            id=""
+                            class="btn btn-primary"
+                            href="#"
+                            role="button">
+                            Carta
+                        </a>
+                        |<a
+                            name=""
+                            id=""
+                            class="btn btn-secondary"
+                            href="#"
+                            role="button">
+                            Editar
+                        </a>
+                        |<a
+                            name=""
+                            id=""
+                            class="btn btn-danger"
+                            href="#"
+                            role="button">
+                            Eliminar
+                        </a>
+                        
+                    </td>
                 </tr>
                 
             </tbody>
