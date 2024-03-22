@@ -50,7 +50,7 @@
                             role="button">
                             Carta
                         </a>
-                        |<a
+                        -<a
                             name=""
                             id=""
                             class="btn btn-secondary"
@@ -58,7 +58,7 @@
                             role="button">
                             Editar
                         </a>
-                        |<a
+                        -<a
                             name=""
                             id=""
                             class="btn btn-danger"
