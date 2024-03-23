@@ -28,7 +28,7 @@
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Foto</th>
-                    <th scope="col">CV</th>
+                    <th scope="col">Curriculum Vitae</th>
                     <th scope="col">Puesto</th>
                     <th scope="col">Fecha de ingreso</th>
                     <th scope="col">Acciones</th>
