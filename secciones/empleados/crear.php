@@ -18,6 +18,34 @@
         />
         
     </div>
+
+    <div class="mb-3">
+        <label for="segundonombre" class="form-label">Segundo nombre</label>
+        <input
+            type="text"
+            class="form-control"
+            name="segundonombre"
+            id="segundonombre"
+            aria-describedby="helpId"
+            placeholder="Segundo nombre"
+        />
+        
+    </div>
+
+    <div class="mb-3">
+        <label for="primerapellido" class="form-label">Primer apellido</label>
+        <input
+            type="text"
+            class="form-control"
+            name="primerapellido"
+            id="primerapellido"
+            aria-describedby="helpId"
+            placeholder="Primer apellido"
+        />
+        
+    </div>
+    
+    
     
     </div>
     <div class="card-footer text-muted"></div>
