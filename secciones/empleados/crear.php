@@ -44,6 +44,19 @@
         />
         
     </div>
+
+    <div class="mb-3">
+        <label for="segundopellido" class="form-label">Segundo apellido</label>
+        <input
+            type="text"
+            class="form-control"
+            name="segundoapellido"
+            id="segundoapellido"
+            aria-describedby="helpId"
+            placeholder="Segundo apellido"
+        />
+        
+    </div>
     
     
     
