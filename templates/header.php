@@ -31,7 +31,7 @@ $url_base="http://localhost/practicos/app/";
         <nav class="navbar navbar-expand navbar-light bg-light">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page"
+                    <a class="nav-link active" href="/practicos/app/index.php" aria-current="page"
                         >Sistema Web <span class="visually-hidden">(current)</span></a
                     >
                 </li>
