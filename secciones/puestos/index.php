@@ -1,6 +1,21 @@
 <?php 
  include("../../bd.php");
 
+ //como se lee: si recibimoes este dato
+ if(isset($_GET['txtID'])){
+    //vamos a almacenar el id
+    $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
+
+    //vamos a preparar una instruccion SQL
+    $sentencia=$conexion->prepare("DELETE FROM tbl_puestos WHERE id=:id");
+    //vamos a pasar un parametro para el borrado
+    $sentencia->bindParam(":id", $txtID);
+    //y borramos
+    $sentencia->execute();
+    //este header es para redireccionar
+    header("Location:index.php");
+ }
+
  $sentencia=$conexion->prepare("SELECT * FROM tbl_puestos");
  $sentencia->execute();
  $lista_tbl_puestos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
@@ -53,13 +68,14 @@
                                 value="Editar"
                             />
 
-                            <input
-                                name="btnborrar"
-                                id="btnborrar"
+                            
+                            <a
                                 class="btn btn-danger"
-                                type="button"
-                                value="Eliminar"
-                            />
+                                href="index.php?txtID=<?php echo $registro['id']; ?>"
+                                role="button"
+                                >Eliminar</a
+                            >
+                            
                         </td>
                     </tr>
 
