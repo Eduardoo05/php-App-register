@@ -60,14 +60,13 @@
                         <td scope="row"><?php echo $registro['id']; ?></td>
                         <td><?php echo $registro['puestodelempleado']; ?></td>
                         <td>
-                            <input
-                                name="btneditar"
-                                id="btneditar"
-                                class="btn btn-info"
-                                type="button"
-                                value="Editar"
-                            />
 
+                            <a
+                                class="btn btn-success"
+                                href="editar.php?txtID=<?php echo $registro['id']; ?>"
+                                role="button"
+                                >Editar</a
+                            >
                             
                             <a
                                 class="btn btn-danger"
