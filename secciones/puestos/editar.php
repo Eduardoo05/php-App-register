@@ -2,7 +2,7 @@
 
 <?php
 
-include("../../bd.php");
+    include("../../bd.php");
 
     //como se lee: si recibimoes este dato
     if(isset($_GET['txtID'])){
