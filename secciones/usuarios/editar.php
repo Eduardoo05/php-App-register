@@ -18,6 +18,7 @@
         $passwordText=$registro['password'];
         $correo=$registro['correo'];
         //validar compatibilidad entre variables y datos
+        echo 'esta parte debe ser borrada lol';
 
 
     }
