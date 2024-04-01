@@ -1,6 +1,21 @@
 <?php
 include("../../bd.php");
 
+ //como se lee: si recibimoes este dato
+ if(isset($_GET['txtID'])){
+    //vamos a almacenar el id
+    $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
+
+    //vamos a preparar una instruccion SQL
+    $sentencia=$conexion->prepare("DELETE FROM tbl_puestos WHERE id=:id");
+    //vamos a pasar un parametro para el borrado
+    $sentencia->bindParam(":id", $txtID);
+    //y borramos
+    $sentencia->execute();
+    //este header es para redireccionar
+    header("Location:index.php");
+ }
+
 $sentencia=$conexion->prepare("SELECT * FROM tbl_usuarios");
 $sentencia->execute();
 $lista_tbl_usuarios=$sentencia->fetchAll(PDO::FETCH_ASSOC);
