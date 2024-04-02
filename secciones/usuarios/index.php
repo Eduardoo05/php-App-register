@@ -7,7 +7,7 @@ include("../../bd.php");
     $txtID=(isset($_GET['txtID']))?$_GET['txtID']:"";
 
     //vamos a preparar una instruccion SQL
-    $sentencia=$conexion->prepare("DELETE FROM tbl_puestos WHERE id=:id");
+    $sentencia=$conexion->prepare("DELETE FROM tbl_usuarios WHERE id=:id");
     //vamos a pasar un parametro para el borrado
     $sentencia->bindParam(":id", $txtID);
     //y borramos
