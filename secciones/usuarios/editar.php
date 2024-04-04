@@ -4,26 +4,30 @@
 
     include("../../bd.php");
 
-    if(isset($_GET['editText'])){
+    if(isset($_GET['txtID'])){
         //vamos a almacenar el id
         $txtID=(isset($_GET['$txtID'])?$_GET['txtID']:"");
         //preparamos una instruccion SQL
         $sentencia=$conexion->prepare("SELECT * FROM tbl_usuarios WHERE id=:id");
         //pasamos un parametro para editarlo
-        $sentencia->bindParam("txtID", $txtID);
+        $sentencia->bindParam(":id", $txtID);
         //se ejecuta la posibilidad de edicion
         $sentencia->execute();
         $registro=$sentencia->fetch(PDO::FETCH_LAZY);
         $usuario=$registro['usuario'];
-        $passwordText=$registro['password'];
+        $password=$registro['password'];
+        $correo=$registro['correo'];
+
+        //
+        /*$passwordText=$registro['password'];
         $correo=$registro['correo'];
         //validar compatibilidad entre variables y datos
-        echo 'esta parte debe ser borrada lol';
+        echo 'esta parte debe ser borrada lol';*/
 
 
     }
 
-    if($_POST){
+    /*if($_POST){
 
         //recolectamos los datos del metodo post
         $txtID=(isset($_POST['txtID'])?$_POST['txtID']:"");
@@ -33,7 +37,7 @@
         $correo=(isset($_POST['editarCorreo'])?$_POST['editarCorreo']:"");
         //se prepara la insercion de datos mediante una sentencia
         $sentencia=$conexion->prepare("UPDATE tbl_usuarios SET usuarios=:editarNombre 
-            /*password=:editarPassword correo=:editarCorreo*/ WHERE id=:id");
+            /*password=:editarPassword correo=:editarCorreo*/ /*WHERE id=:id");
         $sentencia=$conexion->prepare("UPDATE tbl_usuarios SET passwordText=:editarPassword WHERE id=:id");
         //asignando los valores que vienen de la base de datos y el metodo post con bindParam
         $sentencia->bindParam("usuario", $usuario);
@@ -45,7 +49,7 @@
         $sentencia->execute();
         //redirigir una vez ejecutado
         header("Location:index.php");
-    }
+    }*/
 
 ?>
 
@@ -72,12 +76,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Nombre</label>
+                <label for="usuario" class="form-label">Nombre</label>
                 <input
                     type="text"
                     class="form-control"
-                    name="editarNombre"
-                    id="editarNombre"
+                    name="usuario"
+                    id="usuario"
                     aria-describedby="helpId"
                     placeholder="Escribe nuevo usuario"
                     value="<?php echo $usuario; ?>"
