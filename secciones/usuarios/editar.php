@@ -76,7 +76,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="usuario" class="form-label">Nombre</label>
+                <label for="usuario" class="form-label">Nombre:</label>
                 <input
                     type="text"
                     class="form-control"
@@ -90,7 +90,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Contraseña</label>
+                <label for="" class="form-label">Contraseña:/label>
                 <input
                     type="text"
                     class="form-control"
@@ -104,7 +104,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Correo</label>
+                <label for="" class="form-label">Correo:</label>
                 <input
                     type="text"
                     class="form-control"
