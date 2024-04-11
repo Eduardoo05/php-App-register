@@ -3,7 +3,7 @@
 include("../../bd.php");
 
 if($_POST){
-    //print_r($_POST);
+    
 
     //recolectamos los datos con el metodo post
     $usuario=(isset($_POST['usuario'])?$_POST['usuario']:"");

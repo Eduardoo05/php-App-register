@@ -98,7 +98,7 @@
                     id="editarPassword"
                     aria-describedby="helpId"
                     placeholder="Escribe nueva contraseña"
-                    value="<?php echo $passwordText; ?>"
+                    value="<?php echo $password; ?>"
                 />
                 
             </div>
