@@ -17,39 +17,32 @@
         $usuario=$registro['usuario'];
         $password=$registro['password'];
         $correo=$registro['correo'];
-
-        //
-        /*$passwordText=$registro['password'];
-        $correo=$registro['correo'];
-        //validar compatibilidad entre variables y datos
-        echo 'esta parte debe ser borrada lol';*/
-
-
     }
 
-    /*if($_POST){
-
-        //recolectamos los datos del metodo post
+    if($_POST){
+        //recolectamos los datos con el metodo post
         $txtID=(isset($_POST['txtID'])?$_POST['txtID']:"");
-        //conectamos los inputs con los conectores de la base de datos
-        $usuario=(isset($_POST['editarNombre'])?$_POST['editarNombre']:"");
-        $passwordText=(isset($_POST['editarPassword'])?$_POST['editarPassword']:"");
-        $correo=(isset($_POST['editarCorreo'])?$_POST['editarCorreo']:"");
-        //se prepara la insercion de datos mediante una sentencia
-        $sentencia=$conexion->prepare("UPDATE tbl_usuarios SET usuarios=:editarNombre 
-            /*password=:editarPassword correo=:editarCorreo*/ /*WHERE id=:id");
-        $sentencia=$conexion->prepare("UPDATE tbl_usuarios SET passwordText=:editarPassword WHERE id=:id");
-        //asignando los valores que vienen de la base de datos y el metodo post con bindParam
-        $sentencia->bindParam("usuario", $usuario);
-        $sentencia->bindParam("password", $passwordText);
-        $sentencia->bindParam("correo", $correo);
-        //volvemos el metodo global txtID en que vaya vinculado al id que caiga asignado
+        $usuario=(isset($_POST['usuario'])?$_POST['usuario']:"");
+        $password=(isset($_POST['password'])?$_POST['password']:"");
+        $correo=(isset($_POST['correo'])?$_POST['correo']:"");
+    
+        //preparar la insercion de datos o registros
+        $sentencia=$conexion->prepare("UPDATE tbl_usuarios SET 
+        usuario=:usuario,
+        password=:password,
+        correo=:correo
+        WHERE id=:id
+        ");
+    
+        //Asignando los valores que vienen del metodo POST (Los que vienen en el formulario)
+        $sentencia->bindParam(":usuario", $usuario);
+        $sentencia->bindParam(":password", $password);
+        $sentencia->bindParam(":correo", $correo);
         $sentencia->bindParam(":id", $txtID);
-        //ejecutar el post
+        //ejecutar sentencia
         $sentencia->execute();
-        //redirigir una vez ejecutado
-        header("Location:index.php");
-    }*/
+        //header("Location:index.php");
+    }
 
 ?>
 
@@ -90,7 +83,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">Contraseña:/label>
+                <label for="" class="form-label">Contraseña:</label>
                 <input
                     type="text"
                     class="form-control"
